@@ -1,5 +1,5 @@
-streamlit
-transformers
-torch
-nltk
-scikit-learn
+streamlit==1.31.1
+transformers==4.36.2
+torch==2.1.2
+nltk==3.8.1
+sentencepiece
