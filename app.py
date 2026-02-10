@@ -5,8 +5,12 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 # Download necessary NLTK data
-nltk.download("punkt")
-nltk.download("stopwords")
+import os
+nltk.data.path.append(os.path.join(os.getcwd(), "nltk_data"))
+
+nltk.download("punkt", download_dir="nltk_data")
+nltk.download("stopwords", download_dir="nltk_data")
+
 
 # Load a pre-trained Hugging Face model (once, to optimize performance)
 @st.cache_resource
